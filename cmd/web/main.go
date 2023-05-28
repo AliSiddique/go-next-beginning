@@ -5,10 +5,11 @@ import (
 	"bookings-udemy/pkg/handlers"
 	"bookings-udemy/pkg/render"
 	"fmt"
-	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/alexedwards/scs/v2"
 )
 
 const portNumber = ":8080"
@@ -20,7 +21,7 @@ var session *scs.SessionManager
 func main() {
 	// change this to true when in production
 	app.InProduction = false
-
+	fmt.Println("hello ali")
 	// set up the session
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
